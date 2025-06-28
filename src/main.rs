@@ -18,11 +18,12 @@ fn main() {
     // printing out the constant
     println!("The value of the constant is: {THREE_HOURS_IN_SECONDS}");
 
-    // demonstrating shadowing and scopes
-    let x = x + 1;
+    // demonstrating shadowing and scopesi
+    let y = 5;
+    let y = y + 1;
     {
-        let x = x * 2;
-        println!("The value of x is: {x}");
+        let y = y * 2;
+        println!("The value of y is: {y}");
     }
-    println!("The value of x is: {x}");
+    println!("The value of y is: {y}");
 }
