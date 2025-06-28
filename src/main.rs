@@ -47,4 +47,19 @@ fn main() {
     // note that if spaces were muted it would cause a compile time error since we cannot
     // change the type of a mutable variable
 
+    // the scalar data types in rust are Integer, FLoating-Point, Boolean and Character
+    // declaration and initialization of g as an integer
+    let g: u8 = "255".parse().expect("Not a number");
+    println!("The value of g is: {g}");
+
+    // declaring floating: point variables
+    let a = 3.0;
+    let b: f64 = 4.0;
+
+    let sum = a+b;
+    let product = a*b;
+
+    println!("sum is {sum}, product is {product}");
+    // note in rust you cannot multiply an integer and a floating-point number
+    println!("Truncated {}",-5.0/3.0);
 }
