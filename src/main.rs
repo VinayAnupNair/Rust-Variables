@@ -62,4 +62,22 @@ fn main() {
     println!("sum is {sum}, product is {product}");
     // note in rust you cannot multiply an integer and a floating-point number
     println!("Truncated {}",-5.0/3.0);
+
+    // now let's look at booleans
+    // implicit assignment
+    let _t = true;
+    // exlicit assignment
+    let _f: bool = false;
+
+    // character type
+    let _c = 'a';
+    let _c: char = 'A';
+    let happy: char = '😊';
+    println!("{}",happy);
+
+    // Compound types
+    // -- tuples
+    // -- arrays
+    
+    // we start with tuples_
 }
