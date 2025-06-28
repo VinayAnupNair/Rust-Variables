@@ -18,12 +18,33 @@ fn main() {
     // printing out the constant
     println!("The value of the constant is: {THREE_HOURS_IN_SECONDS}");
 
-    // demonstrating shadowing and scopesi
+    // demonstrating shadowing and scopes
+    // we declare and innitialize an immutable variable y
     let y = 5;
+
+    // notice that we can use let to change the calue of y
     let y = y + 1;
     {
+        // we can change it again in this scope
         let y = y * 2;
+
+        // printing out the value of y
         println!("The value of y is: {y}");
     }
+
+    // printing out the value of y
     println!("The value of y is: {y}");
+
+    // declaring a new variable spaces
+    let tabs = "          ";
+
+    // using shadowing to change the type of tabs implicitly
+    let tabs = tabs.len();
+    
+    // we can now see the value of stabs
+    println!("The value of tabs is: {tabs}");
+
+    // note that if spaces were muted it would cause a compile time error since we cannot
+    // change the type of a mutable variable
+
 }
