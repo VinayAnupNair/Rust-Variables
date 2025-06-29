@@ -95,4 +95,9 @@ fn main() {
     let _six_point_four = tup.1;
     let _one = tup.2;
 
+    // we can declare an array like so
+    let arr:[i32; 5] = [0, 1, 2, 3, 4];
+    let first = arr[0];
+    println!("{first} {} ", arr[3]);
+
 }
