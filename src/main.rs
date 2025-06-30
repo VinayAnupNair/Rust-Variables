@@ -99,5 +99,9 @@ fn main() {
     let arr:[i32; 5] = [0, 1, 2, 3, 4];
     let first = arr[0];
     println!("{first} {} ", arr[3]);
+    greet();
+}
 
+fn greet(){
+    println!("Hello");
 }
