@@ -99,9 +99,37 @@ fn main() {
     let arr:[i32; 5] = [0, 1, 2, 3, 4];
     let first = arr[0];
     println!("{first} {} ", arr[3]);
+    // calling function greet
     greet();
+
+    // calling finction number with parameter 6
+    number(6);
+
+    // calling function return value to store in a variable
+    let w = return_value(7);
+    println!("the value of w is: {}",w);
 }
 
+// declaring function greet
 fn greet(){
+
+    // printing out hello 
     println!("Hello");
+
+}
+
+// declaring function number with parameter x which is a 32-bit integer
+fn number(x: i32){
+
+    // printing out the value x
+    println!("The value of x is: {}",x);
+
+}
+
+fn return_value(z: i32)-> i32{
+    let y = {
+        let x = 3;
+        x + 1
+    };
+    y + z
 }
