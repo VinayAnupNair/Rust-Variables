@@ -1,3 +1,5 @@
+use std::io;
+
 fn main() {
 
     // initializing the mutable variable x and assigning it the value 5
@@ -132,4 +134,13 @@ fn return_value(z: i32)-> i32{
         x + 1
     };
     y + z
+}
+
+fn can_ride(){
+}
+
+fn read_int(){
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Failed to read line");
+    input.trim().parse::<i32>().expect("Please enter a valid number");
 }
