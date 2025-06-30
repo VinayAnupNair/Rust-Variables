@@ -1,4 +1,4 @@
-use std::io;
+use std::io::{self, Write};
 
 fn main() {
 
@@ -110,6 +110,7 @@ fn main() {
     // calling function return value to store in a variable
     let w = return_value(7);
     println!("the value of w is: {}",w);
+    can_ride();
 }
 
 // declaring function greet
@@ -137,10 +138,18 @@ fn return_value(z: i32)-> i32{
 }
 
 fn can_ride(){
+    print!("Enter your height in cm: ");
+    io::stdout().flush().unwrap();
+    let h = read_int();
+    if h < 120{
+        println!("Sorry you cannot ride yet");
+    }else{
+        println!("Ok, go ahead");
+    }
 }
 
-fn read_int(){
+fn read_int() -> i32{
     let mut input = String::new();
     io::stdin().read_line(&mut input).expect("Failed to read line");
-    input.trim().parse::<i32>().expect("Please enter a valid number");
+    input.trim().parse::<i32>().expect("Please enter a valid number")
 }
